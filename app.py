@@ -1,5 +1,7 @@
 
 
+import csv
+
 from flask import Flask
 from flask import request
 # import requests
@@ -11,10 +13,10 @@ app = Flask(__name__)
 def index():
     # Etsy: https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=bicycle&includes=Images,Shop&sort_on=score
 
-    response = requests.get('https://swapi.co/api/planets/')
+    response = requests.get('https://api.etsy.com/v2/listings/active.js?api_key=cdwxq4soa7q4zuavbtynj8wx&keywords=bicycle&includes=Images,Shop&sort_on=score')
     data = response.json()
 
-    planets = data['results']
+    bike_photos = data['results']
 
     planet_html = []
 

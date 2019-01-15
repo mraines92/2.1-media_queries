@@ -1,5 +1,10 @@
 *{
     margin: 0px;
+    background-image: linear-gradient(from right, teal, grey);
+}
+body{
+        background-image: linear-gradient(from right, teal, grey);
+
 }
 @media (min-width: 576px){
     .bikes{
